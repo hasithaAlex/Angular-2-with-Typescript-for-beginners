@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {CoursesComponent} from './courses.component';
+import {CoursesComponent} from './01_component/courses.component';
 import {ShortCourseComponent} from './shortCourses.component';
 import {RatingComponent} from './03_bindings/rating.component';
 

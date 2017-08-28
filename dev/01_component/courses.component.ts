@@ -1,19 +1,16 @@
 import { Component } from 'angular2/core';
-import { CourseService } from './services/course.servece';
-import { AutoGrowDirective} from './directive/auto-grow.directive';
+import { CourseService } from './course.servece';
 
 @Component({
     selector: 'courses',
     template: `
     <h1>Courses</h1>
-    <input type="text" autoGrow/>
     - {{title}}
     <ul *ngFor="#course of courses">
         <li>{{course}}</li>
     </ul>
     `,
-    providers: [CourseService],
-    directives: [AutoGrowDirective] 
+    providers: [CourseService]
 
 })
 
@@ -22,7 +19,6 @@ export class CoursesComponent{
     courses: string[] = [];
 
     constructor(courseService: CourseService){
-        debugger;
         let courses =  courseService.getCourses();
 
         for (var index = 0; index < courses.length; index++) {
